@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+}
+
+group 'reactive-tutorial-example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "io.reactivex.rxjava2:rxjava:2.0.7"
+    compile 'io.reactivex.rxjava2:rxjavafx:2.2.2'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
+
+javafx {
+    version = "12"
+    modules = [ 'javafx.controls', 'javafx.fxml']
+}
+
+mainClassName = 'reactive.tutorial.example.MyApp'
+
+
